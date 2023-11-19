@@ -14,6 +14,13 @@ void swap(int *xp, int *yp)
 	*xp = *yp;
 	*yp = tmp;
 }
+/**
+ * bubble_sort - sorting array using bubble algorithm
+ * @array: The Array
+ * @size: size of array
+ *
+ * Return: void
+ */
 
 void bubble_sort(int *array, size_t size)
 {
