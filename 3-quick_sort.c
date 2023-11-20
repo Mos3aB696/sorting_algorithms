@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * _partition - function that used tp partition the
+ * partition - function that used tp partition the
  * array around povit
  * @arr: input array
  * @low: index for the first element
