@@ -2,8 +2,8 @@
 
 /**
  * swap - function that used to swap to element
- * @a: first element
- * @b: sacond element
+ * @xp:first element
+ * @yp: sacond element
  *
  * Return: nothing
  */
