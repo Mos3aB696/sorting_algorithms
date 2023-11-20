@@ -76,8 +76,7 @@ void quick_sort_helper(int *arr, int low, int high, size_t size)
  */
 void quick_sort(int *array, size_t size)
 {
-	if (size > 1)
-	{
-		quick_sort_helper(array, 0, size - 1, size);
-	}
+	if (size < 2)
+		return;
+	quick_sort_helper(array, 0, size - 1, size);
 }
