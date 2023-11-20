@@ -1,6 +1,20 @@
 #include "sort.h"
 
 /**
+ * swap - swap function
+ * @xp: The Position Of Previous Element
+ * @yp: The Position Of Current Element
+ *
+ * Return: void
+ */
+
+void swap(int *xp, int *yp)
+{
+	size_t tmp = *xp;
+	*xp = *yp;
+	*yp = tmp;
+}
+/**
  * bubble_sort - sorting array using bubble algorithm
  * @array: The Array
  * @size: size of array
@@ -10,22 +24,22 @@
 
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, j, tmp;
+	size_t i, j;
+	bool swapped;
 
-	if (size < 2)
-		return;
-
-	for (i = 0; i < size; i++)
+	for (i = 0; i < size - 1; i++)
 	{
-		for (j = 0; j < size - 1; j++)
+		swapped = false;
+		for (j = 0; j < size - i - 1; j++)
 		{
 			if (array[j] > array[j + 1])
 			{
-				tmp = array[j];
-				array[j] = array[j + 1];
-				array[j + 1] = tmp;
+				swap(&array[j], &array[j + 1]);
 				print_array(array, size);
+				swapped = true;
 			}
 		}
+		if (swapped == false)
+			break;
 	}
 }
