@@ -15,7 +15,7 @@ void swap(int *xp, int *yp)
 }
 
 /**
- * _partition - function that used tp partition the
+ * partition - function that used tp partition the
  * array around povit
  * @arr: input array
  * @low: index for the first element
@@ -44,7 +44,7 @@ int partition(int arr[], int low, int high, size_t size)
 }
 
 /**
- * quick_sort -  function that sorts an array of integers in
+ * quick_sort_helper -  function that sorts an array of integers in
  * ascending order using
  * the Quick sort algorithm
  * @arr: input array
@@ -59,6 +59,7 @@ void quick_sort_helper(int *arr, int low, int high, size_t size)
 	if (low < high)
 	{
 		int index = partition(arr, low, high, size);
+
 		quick_sort_helper(arr, low, index - 1, size);
 		quick_sort_helper(arr, index + 1, high, size);
 	}
